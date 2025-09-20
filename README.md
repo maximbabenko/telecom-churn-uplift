@@ -12,7 +12,7 @@
 - `treatment` — бинарный индикатор воздействия (например, предложенная акция/оффер).  
 - `PC1…PC177` — обезличенные признаки (поведение клиентов, usage, доход, сегменты).  
 
-🔹 Особенности:
+Особенности:
 - **~12k клиентов**,  
 - **~177 признаков (PC-фичи + категориальные FACTOR)**,  
 - сильный **дисбаланс классов**: churn ≈ 3–4%.  
@@ -30,24 +30,26 @@
 
 ## Структура проекта
 
+.
 ├── data/
-│ ├── raw/ # исходные данные (CSV/Parquet + _std.)
-│ └── processed/ # препроцессор, сплиты, y_*.npy
+│   ├── raw/                 # исходные данные (CSV/Parquet + std.)
+│   └── processed/           # препроцесс, слипы, y*, *.npy
 ├── notebooks/
-│ ├── EDA.ipynb # разведочный анализ
-│ ├── processed.ipynb # чистка/препроцесс/сплиты
-│ ├── modeling.ipynb # базовые и балансированные модели churn
-│ ├── lgbm_tuned.ipynb # тюнинг LGBM (+ выбор порога)
-│ └── uplift.ipynb # uplift-модели (CT, TwoModels) + метрики/графики
+│   ├── EDA.ipynb            # разведочный анализ
+│   ├── processed.ipynb      # чистка/препроцесс/слипы
+│   ├── modeling.ipynb       # базовые и баланс. модели churn
+│   ├── lgbm_tuned.ipynb     # тюнинг LGBM 
+│   └── uplift.ipynb         # uplift-модели (CT, TwoModels) 
 ├── reports/
-│ ├── figures/ # все картинки из ноутбуков
-│ └── eda_summary.csv # сводка по фичам
+│   ├── figures/             # все картинки из ноутбуков
+│   └── eda_summary.csv      # сводка по фичам
 ├── src/
-│ ├── data/load_openml.py # загрузка из OpenML (использовали вначале)
-│ ├── features/standardize_columns.py # приведение колонок churn/treatment
-│ └── utils/ # (под будущие хелперы)
+│   ├── data/
+│   │   └── load_openml.py   # загрузка из OpenML
+│   │   └── standardize_columns.py  # приведение колонок churn/treatment
 ├── requirements.txt
 └── README.md
+
 
 ## Технологии
 
