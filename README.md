@@ -50,26 +50,6 @@
 ├── requirements.txt
 └── README.md
 ```
-.
-|-- data/
-|   |-- raw/                 # исходные данные
-|   `-- processed/           # препроцесс
-|-- notebooks/
-|   |-- EDA.ipynb            # анализ
-|   |-- processed.ipynb      # чистка/препроцесс
-|   |-- modeling.ipynb       # базовые модели
-|   |-- lgbm_tuned.ipynb     # тининг LGBM
-|   `-- uplift.ipynb         # uplifr-модели
-|-- reports/
-|   |-- figures/
-|   `-- eda_summary.csv
-|-- src/
-|   |-- data/
-|   |   `-- load_openml.py   # загрузка датасета
-|   |   `-- standardize_columns.py   # приведение колонок churn\treatment  
-|-- requirements.txt
-`-- README.md
-
 
 ## Технологии
 
